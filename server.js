@@ -5,7 +5,7 @@ const cors = require('cors');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 app.use(cors({
   origin: '*'
@@ -629,3 +629,4 @@ process.on('SIGTERM', () => {
 
 
 module.exports = app;
+
