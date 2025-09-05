@@ -7,11 +7,8 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://your-frontend-domain.com'],
-  credentials: true
+  origin: '*'
 }));
 
 // Serve static files from public directory
@@ -629,5 +626,6 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
+
 
 module.exports = app;
